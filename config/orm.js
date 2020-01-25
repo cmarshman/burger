@@ -1,4 +1,4 @@
-const connection = required("../config/connection.js");
+var connection = required("../config/connection.js");
 
 function printQuestions(num) {
     var arr = [];
@@ -85,4 +85,4 @@ var orm = {
 };
 
 
-module.export = orm;
+module.exports = orm;
