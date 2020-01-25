@@ -1,39 +1,25 @@
-var exphbs = require("express-handlebars");
+var express = require("express");
+
+var PORT = process.env.PORT || 8080;
 
 var app = express();
 
-// Set the port of our application
-// process.env.PORT lets the port be set by Heroku
-var PORT = process.env.PORT || 8080;
+app.use(express.static("public"));
 
-// Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+var routes = require("./controllers/burgers_controller.js");
 
+app.use(routes);
 
-app.get("/", function(req, res){
-    connection.query("SELECT * FROM burgers", function(err, data){
-        if (err) {
-            return res.status(500).end();
-        }
-        res.render("index", { burgers: data });
-    });
+app.listen(PORT, function(){
+    console.log("Server is listening on: http://localhost:" + PORT);
 });
 
-app.post("/api/burgers", function(req, res) {
-    connection.query("INSERT INTO burgers (burger) VALUES (?)", [req.body.burger], function(err, result) {
-        if (err) {
-            return res.status(500).end();
-        }
-        res.json({ id: result.insertId });
-        console.log({ id: result.insertId });
-    });
-});
 
-app.put("/api/movie/:id", function(req, res){
-    connection.query()
-})
