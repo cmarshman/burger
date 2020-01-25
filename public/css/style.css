@@ -1,7 +1,7 @@
 body {
-    background-color: #72cde0,
-}
-
-h1 {
-    background-color: #72cde0;
+    background-image: url(../assets/img/burger_brain.gif);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    align-content: center;
 }

@@ -1,7 +1,9 @@
+<div class="jumbotron">
 <h1>BURGERS!</h1>
 
+<div class="container">
+<div class="row">
 <h2>Burgers that need to be IN MY BELLEY</h2>
-
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
@@ -9,9 +11,9 @@
     {{/unless}}
   {{/each}}
 </ul>
-
+</div>
+</div>
 <h2>Burgers in MY BELLEY</h2>
-
 <ul>
   {{#each burgers}}
     {{#if devoured}}
@@ -19,7 +21,6 @@
     {{/if}}
   {{/each}}
 </ul>
-
 <h2>Add a Burger</h2>
 <form class="create-form">
 
@@ -27,5 +28,7 @@
     <label for="ca"> Whats your burger:</label>
     <input type="text" id="ca" name="name">
   </div>
-  <button type="submit" name="devoured">Add Burger</button>
+  <button class="btn btn-primary btn-lg" role="button" type="submit" name="devoured">Add Burger</button>
 </form>
+
+</div>
