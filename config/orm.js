@@ -1,6 +1,6 @@
 var connection = require("../config/connection.js");
 
-function printQuestions(num) {
+function printQuestionMarks(num) {
     var arr = [];
 
     for (var i = 0; i < num; i++) {
