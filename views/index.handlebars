@@ -1,34 +1,65 @@
-<div class="jumbotron">
-<h1>BURGERS!</h1>
-
-<div class="container">
-<div class="row">
-<h2>Burgers that need to be IN MY BELLEY</h2>
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-</div>
-</div>
-<h2>Burgers in MY BELLEY</h2>
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca"> Whats your burger:</label>
-    <input type="text" id="ca" name="name">
+<section class="hero is-dark is-fullheight">
+  <div class="hero-body" id="hero_picture">
+    <div class="container has-text-centered is-dark">
+      <a class="is-pulled-left" href="#eat_a_burger" id="down_arrow">
+        <i class="fas fa-arrow-down fa-3x"></i>
+      </a>
+    </div>
   </div>
-  <button class="btn btn-primary btn-lg" role="button" type="submit" name="devoured">Add Burger</button>
-</form>
+</section>
+<br>
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-11" id="tile">
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-dark">
+        <p class="title banana" id="eat_a_burger">HAVE SOME BURGERS</p>
+        <div class="hero-body">
+          <section>
+            <div class="tile is-ancestor">
+              <div class="tile is-parent">
+                <article class="tile is-child box notification is-light">
+                  <h2>Burgers on your plate</h2>
+                  <ul>
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    {{> burgers/burger-block devoured=true}}
+                    {{/unless}}
+                    {{/each}}
+                  </ul>
 
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box notification is-light">
+                  <h1>Add a new burger to your plate</h1>
+                  <form class="create-form">
+
+                    <div class="form-group">
+                      <label for="ca"></label>
+                      <input class="input is-medium is-info" type="text" id="ca" name="name" placeholder="Add your favorite burger . . .">
+                    </div>
+                    <br>
+                    <button class="button is-link is-outlined is-small"type="submit" name="devoured">Add Burger</button>
+                  </form>
+
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box notification is-light">
+                  <h2>Burgers in your BELLEY</h2>
+                  <ul>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    {{> burgers/burger-block devoured=false}}
+                    {{/if}}
+                    {{/each}}
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </div>
 </div>

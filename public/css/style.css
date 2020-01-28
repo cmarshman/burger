@@ -1,7 +1,21 @@
-body {
-    background-image: url(../assets/img/burger_brain.gif);
+#hero_picture {
+    background-image: url(../assets/img/bobs_background.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
     align-content: center;
+}
+
+#down_arrow {
+    color: #ffffff!important;
+}
+
+.banana{
+    background: #363636!important;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#tile {
+    margin: 0 auto;
 }
