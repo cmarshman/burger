@@ -28,10 +28,10 @@ Github Repo: https://github.com/cmarshman/burger
 
 ## Images
 
-![Opening_page](assets/img/read_me/opening_page.png)
-![Burger_app](assets/img/read_me/burger_app.png)
-![Add_burger](assets/img/read_me/add_burger.png)
-![Eat_burger](assets/img/read_me/eat_burger.png)
+![Opening_page](public/assets/img/read_me/opening_page.png)
+![Burger_app](public/assets/img/read_me/burger_app.png)
+![Add_burger](public/assets/img/read_me/add_burger.png)
+![Eat_burger](public/assets/img/read_me/eat_burger.png)
 
 
 
