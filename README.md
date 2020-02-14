@@ -22,16 +22,16 @@ Please make sure to update tests as appropriate.
 
 ## Links
 
-Page URL: https://git.heroku.com/secret-plateau-38610.git
+Page URL: https://secret-plateau-38610.herokuapp.com/
 
 Github Repo: https://github.com/cmarshman/burger
 
 ## Images
 
-![Opening_page](public/assets/images/read_me/opening_page.png)
-![Burger_app](public/assets/images/read_me/burger_app.png)
-![Add_burger](public/assets/images/read_me/add_burger.png)
-![Eat_burger](public/assets/images/read_me/eat_burger.png)
+![Opening_page](assets/images/read_me/opening_page.png)
+![Burger_app](assets/images/read_me/burger_app.png)
+![Add_burger](assets/images/read_me/add_burger.png)
+![Eat_burger](assets/images/read_me/eat_burger.png)
 
 
 
